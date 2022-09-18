@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mascotas',
+    'registrar_mascotas',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'proyectoFinal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [f'{BASE_DIR}/proyectoFinal/templates',f'{BASE_DIR}/mascotas/templates',f'{BASE_DIR}/registrar_mascotas/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -116,6 +118,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [f'{BASE_DIR}/proyectoFinal/static',
+f'{BASE_DIR}/mascotas/static',
+f'{BASE_DIR}/registrar_mascotas/static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
