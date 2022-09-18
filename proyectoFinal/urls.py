@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from proyectoFinal.views import home # Acá se importan las def de views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #Acá linkeo los def con las vistas de la url
+    path('home/',home),
 ]
