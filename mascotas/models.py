@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 class mascota (models.Model):
@@ -11,6 +12,7 @@ class mascota (models.Model):
         max_length=1,
         choices=opciones_sexo,
         default=Hembra)
+    foto = models.ImageField(upload_to = 'media/')
 
     def __str__(self):
         return self.especie, self.raza
