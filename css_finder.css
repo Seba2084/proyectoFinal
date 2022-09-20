@@ -1,0 +1,30 @@
+
+
+.titulo_principal{
+   display: inline-block; 
+   text-align: center;
+   color: blue;
+
+}
+
+.body{
+    color: aquamarine;
+    display: block;
+    text-align: center;
+}
+.datos_finder{
+   
+        font-family: "Times New Roman", Times, serif, black;
+        font-size: large;
+        display: flex;
+        align-content: space-around;
+        padding-inline: 4%;
+        justify-content:flex-start ;
+        font-size: 80%;
+        padding: auto;
+      }
+
+
+
+
+

@@ -6,15 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>>Registro de Mascotas</title>
+    <link rel="stylesheet" href="./css_finder.css" 
 </head>
-<body>
-  <p>¿ Hallazte una Mascota? Dejanos tus datos</p> 
+<header class="titulo_principal"><h1>Encuentra a tu mascota</h1></header>
+
+  <h2 class="titulo_secundario">¿ Hallazte una Mascota? Dejanos tus datos</h2> 
+  <body class="body">
     <form class="datos_finder">
-<input type="text" name="Inserte su nombre aqui" placeholder="nombre">
-<input type="text" name="Inserte su apellido aqui" placeholder="apellido">
-<input type="text" name="Inserte el lugar del hallazgo" placeholder="lugar">
-<input type="date" name="Inserte la fecha del hallazgo" placeholder="fecha">
-<input type="text" name="¿Què mascota crees que encontraste?" placeholder="mascota">
+      <div class="formulario_finder"><p>Inserte su nombre aqui</p><input class="formulario_finder" type="text"  placeholder="nombre"></div> 
+      <div><p>Inserte su apellido aqui</p><input class="formulario_finder" type="text"  placeholder="apellido"></div>
+      <div><p>Ingrese el lugar del Hallazgo</p><input class="formulario_finder" type="text" placeholder="lugar"></div>
+      <div><p>Ingrese La fecha del Hallazgo</p><input  class="formulario_finder" type="date"  placeholder="fecha"></div>
+      <div><p>¿Què mascota crees que encontraste?</p><input  class="formulario_finder" type="text"  placeholder="mascota">
 <button type="button" class="btn-primary">Ingresar datos</button>
 </form>
 </body>
