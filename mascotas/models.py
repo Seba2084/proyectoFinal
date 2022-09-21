@@ -12,7 +12,7 @@ class mascota (models.Model):
         max_length=1,
         choices=opciones_sexo,
         default=Hembra)
-    foto = models.ImageField(upload_to = 'media/')
+    foto = models.ImageField(upload_to = 'media/', blank=True)
 
     def __str__(self):
         return self.especie, self.raza
