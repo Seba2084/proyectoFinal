@@ -2,6 +2,16 @@
 
 {%load static%}
 
-{% block contenidoVariable %}
+{% block title %} Registrar mascotas {% endblock %}
 
+{% block contenidoVariable %}
+<h1 align="center">¿Quieres registrar una mascota?</h1>
+<div>
+    <form method="POST"> {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Registrar mascota">
+    </form>
+</div>
 {% endblock %}

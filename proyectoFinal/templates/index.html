@@ -1,7 +1,35 @@
 {%extends "maestra.html"%}
+
 {%load static%}
 
+{% block title %} Inicio {% endblock %}
+
 {%block contenidoVariable%}
+
+<div align="center">
+    <h1 style="text-align: center ;">Mascotas perdidas y/o encontradas</h1>
+    <table class="redTable">
+        <thead>
+        <tr>
+        <th>Especie</th>
+        <th>Raza</th>
+        <th>Estatus</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tbody>
+                {%for x in mascota%} <!--Este ciclo for hace referencia a los elementos en el modelo mascta-->
+                <tr>
+                    <td>{{x.especie}}</td>
+                    <td>{{x.raza}}</td>
+                    <td>{{x.estatus}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </tbody>
+        </tr>
+    </table>    
+</div>
 
 
 

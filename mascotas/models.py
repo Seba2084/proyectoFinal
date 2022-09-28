@@ -1,10 +1,16 @@
-from distutils.command.upload import upload
 from django.db import models
 
 class mascota (models.Model):
     especie = models.CharField(max_length=20)
     raza = models.CharField(max_length=30)
     color = models.CharField(max_length=30)
+    Encontrada = 'Encontrada'
+    Perdida = 'Perdida'
+    opciones_estatus = [(Encontrada, 'Encontrada'),(Perdida, 'Perdida')]
+    estatus = models.CharField(
+        max_length=10,
+        choices=opciones_estatus,
+        default=Perdida)
     Macho = 'M'
     Hembra = 'H'
     opciones_sexo = [(Macho, 'M'),(Hembra, 'H')]
@@ -18,6 +24,7 @@ class mascota (models.Model):
         return self.especie, self.raza
 
 class particularidades (models.Model):
+    id_mascota = models.CharField(max_length=5, blank=True) 
     nombre_mascota = models.CharField(max_length=10)
     señas_particulares = models.CharField(max_length=100)
     Cachorro = 'C'
